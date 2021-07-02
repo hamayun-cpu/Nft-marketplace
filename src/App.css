@@ -8,3 +8,19 @@
 .container {
   max-width: 1350px !important;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 80px;
+}
+
+.mt-75 {
+  margin-top: 75px;
+}
+
+.pad-75 {
+  padding-top: 75px;
+}

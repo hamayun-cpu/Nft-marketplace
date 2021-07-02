@@ -4,7 +4,7 @@ import image3 from './assets/pic3.jpg';
 const home = () => {
   return (
     <div class="container">
-      <div class="row">
+      <div class="row mt-75">
 
         <div class="col-sm mt-3">
           <div class="card w-o h-100 m-auto">
