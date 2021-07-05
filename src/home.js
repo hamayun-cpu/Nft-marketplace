@@ -1,7 +1,15 @@
 import image1 from './assets/pic2.jpeg';
 import image2 from './assets/pic1.jpeg';
 import image3 from './assets/pic3.jpg';
-const home = () => {
+import getUsers from './utils/products'
+import useSWR from 'swr';
+
+const Home = () => {
+  const { data: nft, error } = useSWR('./utils/products.js', getUsers);
+
+  if(error) return "Error!";
+  if(!nft) return "Loading!";
+
   return (
     <div class="container">
       <div class="row mt-75">
@@ -82,4 +90,4 @@ const home = () => {
   );
 }
 
-export default home;
+export default Home;
