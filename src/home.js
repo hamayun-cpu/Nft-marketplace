@@ -1,5 +1,5 @@
 import image1 from './assets/pic1.jpeg';
-import getUsers from './utils/products'
+import { getUsers } from './utils/products'
 import useSWR from 'swr';
 
 const Home = () => {

@@ -1,7 +1,6 @@
 import data from '../db/db.json'
 async function getUsers() {
   try {
-
     const dat = data;
     return dat;
   } catch(e) {
@@ -9,4 +8,4 @@ async function getUsers() {
   }
 }
 
-export default getUsers;
+export { getUsers };

@@ -21,7 +21,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/product/:id">
+          <Route exact path="/product/:id"  render={(props) => <Product globalStore={12} {...props} /> } >
             <Product />
           </Route>
           <Route path="/">
