@@ -13,7 +13,6 @@ function App() {
           <div class="navbar-brand">
             <Link to="/" class="mr-3 color-black">Home</Link>
             <Link to="/about" class="mr-3 color-black">About</Link>
-            <Link to="/product" class="color-black">Product</Link>
           </div>
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Connect Wallet</button>
         </nav>
@@ -22,7 +21,7 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/product">
+          <Route path="/product/:id">
             <Product />
           </Route>
           <Route path="/">

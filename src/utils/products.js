@@ -1,8 +1,9 @@
+import data from '../db/db.json'
 async function getUsers() {
   try {
-    const result = await fetch('../db/db.json');
-    const data = await result.json();
-    return data;
+
+    const dat = data;
+    return dat;
   } catch(e) {
     return null;
   }
