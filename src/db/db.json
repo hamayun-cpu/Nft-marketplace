@@ -1,5 +1,4 @@
-{
-  "nfts": [
+[
     {
       "id": 1,
       "picture": "./assets/pic2.jpeg",
@@ -42,5 +41,4 @@
       "description": "its a gaming character BLACK Thor who is the character of Assasin creed with great powers",
       "price": "1 ETH"
     }
-  ]
-}
+]
