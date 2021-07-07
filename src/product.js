@@ -1,13 +1,9 @@
 import image3 from './assets/pic3.jpg';
-import { getUserById } from './utils/product';
+import { getUserById } from './utils/products';
 import { useParams } from 'react-router'
-// import useSWR from 'swr';
 
 const Product = (props) => {
   let { id } = useParams();
-  // const { data: nft, error } = useSWR('./utils/product.js', getUserById(id));
-  // if(error) return "Error!";
-  // if(!nft) return "Loading!";
 
   const nft = getUserById(id);
 
