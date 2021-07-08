@@ -1,7 +1,7 @@
 import image1 from './assets/pic1.jpeg';
 import { getUsers } from './utils/products'
 import useSWR from 'swr';
-import Countdown from "react-countdown";
+import Countdown from 'react-countdown';
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -31,7 +31,7 @@ function Home() {
                   <div class="d-flex justify-content-between">
                     <button class="btn btn-primary">{nft.price}</button>
                     <span class="btn btn-info">
-                      <Countdown date={Date.now() + 5000} renderer={renderer} ></Countdown>
+                      <Countdown date={Date.now() + (nft.time*60000)} renderer={renderer} ></Countdown>
                     </span>
                   </div>
                 </div>

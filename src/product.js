@@ -1,6 +1,15 @@
 import image3 from './assets/pic3.jpg';
 import { getUserById } from './utils/products';
 import { useParams } from 'react-router'
+import Countdown from 'react-countdown';
+
+const renderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+    return "biding Ended";
+  } else {
+    return <span>{hours}:{minutes}:{seconds}</span>;
+  }
+};
 
 const Product = (props) => {
 
@@ -15,7 +24,12 @@ const Product = (props) => {
         <div class="card-body">
           <h5 class="card-title">{nft.title}</h5>
           <p class="card-text"> {nft.description}</p>
-          <button class="btn btn-primary">{nft.price}</button>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-primary">{nft.price}</button>
+            <span class="btn btn-info">
+              <Countdown date={Date.now() + (nft.time*60000)} renderer={renderer} ></Countdown>
+            </span>
+          </div>
         </div>
       </div>
       <table class='mx-auto mt-5'>

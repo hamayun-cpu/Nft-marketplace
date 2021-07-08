@@ -4,41 +4,47 @@
       "picture": "./assets/pic1.jpeg",
       "title": "Black Thor",
       "description": "its a gaming character BLACK Thor who is the character of Assasin creed with great powers",
-      "price": "1 ETH"
+      "price": "1 ETH",
+      "time": "1"
     },
     {
       "id": 2,
       "picture": "./assets/pic2.jpeg",
       "title": "Devil Jin",
       "description": "He is an individual under the control of Devil Gene. His power has gone beyond that of a regular human being",
-      "price": "7 ETH"
+      "price": "7 ETH",
+      "time": "3"
     },
     {
       "id": 3,
       "picture": "./assets/pic3.jpeg",
       "title": "Mario",
       "description": "One of the most Popular character of game Super Mario. We all played Mario and have so much emotional attachment to Mario",
-      "price": "3 ETH"
+      "price": "3 ETH",
+      "time": "5"
     },
     {
       "id": 4,
       "picture": "./assets/pic2.jpeg",
       "title": "Devil Jin",
       "description": "He is an individual under the control of Devil Gene. His power has gone beyond that of a regular human being",
-      "price": "7 ETH"
+      "price": "7 ETH",
+      "time": "2"
     },
     {
       "id": 5,
       "picture": "./assets/pic3.jpeg",
       "title": "Mario",
       "description": "One of the most Popular character of game Super Mario. We all played Mario and have so much emotional attachment to Mario",
-      "price": "3 ETH"
+      "price": "3 ETH",
+      "time": "4"
     },
     {
       "id": 6,
       "picture": "./assets/pic1.jpeg",
       "title": "Black Thor",
       "description": "its a gaming character BLACK Thor who is the character of Assasin creed with great powers",
-      "price": "1 ETH"
+      "price": "1 ETH",
+      "time": "6"
     }
 ]
