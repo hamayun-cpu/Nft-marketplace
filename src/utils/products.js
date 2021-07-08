@@ -1,12 +1,17 @@
 import data from '../db/db.json'
 
-async function getUsers() {
+async function getSalesNft() {
   try {
-    const dat = data;
-    return dat;
+    const result = data.filter(word => word.buyable === true);
+    return result;
   } catch(e) {
     return null;
   }
+}
+
+function getBidNft() {
+  const result = data.filter(word => word.buyable === false);
+  return result;
 }
 
 function getUserById(id) {
@@ -14,4 +19,4 @@ function getUserById(id) {
   return dat[id-1];
 }
 
-export { getUsers, getUserById };
+export { getSalesNft, getUserById, getBidNft };

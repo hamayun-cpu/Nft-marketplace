@@ -18,6 +18,7 @@ const Product = (props) => {
   const nft = getUserById(id);
 
   return (
+
     <div>
       <div class="card w-o h-100 m-auto pad-75">
         <img class="card-img-top h-50" src={image3} alt="Card cap"/>
@@ -32,6 +33,7 @@ const Product = (props) => {
           </div>
         </div>
       </div>
+
       <table class='mx-auto mt-5'>
         <tr>
           <th>Highest bid</th>

@@ -5,7 +5,8 @@
       "title": "Black Thor",
       "description": "its a gaming character BLACK Thor who is the character of Assasin creed with great powers",
       "price": "1 ETH",
-      "time": "1"
+      "time": "1",
+      "buyable": true
     },
     {
       "id": 2,
@@ -13,7 +14,8 @@
       "title": "Devil Jin",
       "description": "He is an individual under the control of Devil Gene. His power has gone beyond that of a regular human being",
       "price": "7 ETH",
-      "time": "3"
+      "time": "3",
+      "buyable": false
     },
     {
       "id": 3,
@@ -21,7 +23,8 @@
       "title": "Mario",
       "description": "One of the most Popular character of game Super Mario. We all played Mario and have so much emotional attachment to Mario",
       "price": "3 ETH",
-      "time": "5"
+      "time": "5",
+      "buyable": true
     },
     {
       "id": 4,
@@ -29,7 +32,8 @@
       "title": "Devil Jin",
       "description": "He is an individual under the control of Devil Gene. His power has gone beyond that of a regular human being",
       "price": "7 ETH",
-      "time": "2"
+      "time": "2",
+      "buyable": false
     },
     {
       "id": 5,
@@ -37,7 +41,8 @@
       "title": "Mario",
       "description": "One of the most Popular character of game Super Mario. We all played Mario and have so much emotional attachment to Mario",
       "price": "3 ETH",
-      "time": "4"
+      "time": "4",
+      "buyable": true
     },
     {
       "id": 6,
@@ -45,6 +50,7 @@
       "title": "Black Thor",
       "description": "its a gaming character BLACK Thor who is the character of Assasin creed with great powers",
       "price": "1 ETH",
-      "time": "6"
+      "time": "6",
+      "buyable": false
     }
 ]

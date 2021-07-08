@@ -1,5 +1,6 @@
 import image1 from './assets/pic1.jpeg';
-import { getUsers } from './utils/products'
+import { getSalesNft } from './utils/products'
+import { getBidNft } from './utils/products';
 import useSWR from 'swr';
 import Countdown from 'react-countdown';
 
@@ -12,16 +13,43 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
 };
 
 function Home() {
-  const { data: nfts, error } = useSWR('./utils/products.js', getUsers);
+  const { data: Salesnfts, error } = useSWR('./utils/products.js', getSalesNft);
+  const bidNfts = getBidNft();
 
   if(error) return "Error!";
-  if(!nfts) return "Loading!";
-
+  if(!Salesnfts) return "Loading!";
 
     return (
+    <div>
+      <div class="d-flex justify-content-center pad-75">
+        <h1>
+          Sales
+        </h1>
+      </div>
       <div class="container">
         <div class="row mt-75 mb-5">
-          {nfts.map((nft) => (
+          {Salesnfts.map((nft) => (
+            <div class="col-sm mt-3">
+              <div class="card w-o h-100 m-auto">
+                <img class="card-img-top h-50" src={image1}  alt="Card cap"/>
+                <div class="card-body">
+                  <h5 class="card-title"><a href={`/product/${nft.id}`} class="color-black">{nft.title}</a></h5>
+                  <p class="card-text">{nft.description}</p>
+                  <button class="btn btn-primary">{nft.price}</button> 
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="d-flex justify-content-center pad-75">
+        <h1>
+          Bids
+        </h1>
+      </div>
+      <div class="container">
+        <div class="row mt-75 mb-5">
+          {bidNfts.map((nft) => (
             <div class="col-sm mt-3">
               <div class="card w-o h-100 m-auto">
                 <img class="card-img-top h-50" src={image1}  alt="Card cap"/>
@@ -40,6 +68,7 @@ function Home() {
           ))}
         </div>
       </div>
+    </div>
     );
   
 }
