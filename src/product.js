@@ -27,13 +27,15 @@ const Product = (props) => {
           <p class="card-text"> {nft.description}</p>
           <div class="d-flex justify-content-between">
             <button class="btn btn-primary">{nft.price}</button>
-            <span class="btn btn-info">
+            {!nft.buyable &&  <span class="btn btn-info">
               <Countdown date={Date.now() + (nft.time*60000)} renderer={renderer} ></Countdown>
-            </span>
+            </span>}
           </div>
+          {nft.buyable && <button class="btn btn-primary mt-2">Buy</button>}
+          {!nft.buyable && <button class="btn btn-primary mt-2">Bid</button>}
         </div>
       </div>
-
+      {!nft.buyable &&
       <table class='mx-auto mt-5'>
         <tr>
           <th>Highest bid</th>
@@ -56,6 +58,36 @@ const Product = (props) => {
           <td>0x1235653234</td>
         </tr>
       </table>
+      }
+      {nft.buyable &&
+      <table class='mx-auto mt-5'>
+        <tr>
+          <th>Sale History</th>
+          <th>From</th>
+          <th>To</th>
+        </tr>
+        <tr>
+          <td>20 ETH</td>
+          <td>0x1235653234</td>
+          <td>0x1235653edc</td>
+        </tr>
+        <tr>
+          <td>20 ETH</td>
+          <td>0x1235653234</td>
+          <td>0x1235653edc</td>
+        </tr>
+        <tr>
+          <td>20 ETH</td>
+          <td>0x1235653234</td>
+          <td>0x1235653edc</td>
+        </tr>
+        <tr>
+          <td>20 ETH</td>
+          <td>0x1235653234</td>
+          <td>0x1235653edc</td>
+        </tr>
+      </table>
+      }
     </div>
   );
 }
