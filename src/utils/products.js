@@ -19,4 +19,11 @@ function getUserById(id) {
   return dat[id-1];
 }
 
-export { getSalesNft, getUserById, getBidNft };
+function getAllIds() {
+  let dat = [];
+  data.forEach((element) => { dat.push({ name: element.id, value: element.id }) } )
+
+  return dat;
+}
+
+export { getSalesNft, getUserById, getBidNft, getAllIds };
