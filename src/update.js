@@ -63,7 +63,7 @@ const Update = () => {
         {toggleValue &&
           <label>
             Bid Price: 
-            <input type="number" id="bidPrice" onChange={ (event) => setBidPrice(event.target.value)} />
+            <input className="ml-2" type="number" id="bidPrice" onChange={ (event) => setBidPrice(event.target.value)} />
           </label>
         }
         <br></br>
@@ -71,7 +71,7 @@ const Update = () => {
         {!toggleValue &&
           <label>
             Sale Price: 
-            <input type="number" id="salePrice" onChange={ (event) => setSalePrice(event.target.value)} />
+            <input className="ml-2" type="number" id="salePrice" onChange={ (event) => setSalePrice(event.target.value)} />
           </label>
         }
 
