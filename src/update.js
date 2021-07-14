@@ -46,6 +46,7 @@ const Update = () => {
   return (
     <div className="d-flex justify-content-center mt-5 pad-75">
       <form className = 'd-flex flex-column align-items-center border rounded p-5' onSubmit={handleSubmit}>
+      <h3 className="mb-5">Convert Nft to Sale/Bid</h3>
         <SelectSearch
           options={ids}
           search
@@ -56,14 +57,15 @@ const Update = () => {
         />
 
         <label className="mt-3">
-          <input type="checkbox" id="myCheck" onChange={ (event) => toggle()}/>
+          <input className="mx-2" type="checkbox" id="myCheck" onChange={ (event) => toggle()}/>
           For bid?
         </label> <br></br>
 
         {toggleValue &&
           <label>
             Bid Price: 
-            <input className="ml-2" type="number" id="bidPrice" onChange={ (event) => setBidPrice(event.target.value)} />
+            <input className="mx-2" type="number" id="bidPrice" onChange={ (event) => setBidPrice(event.target.value)} />
+            ETH
           </label>
         }
         <br></br>
@@ -71,7 +73,8 @@ const Update = () => {
         {!toggleValue &&
           <label>
             Sale Price: 
-            <input className="ml-2" type="number" id="salePrice" onChange={ (event) => setSalePrice(event.target.value)} />
+            <input className="mx-2" type="number" id="salePrice" onChange={ (event) => setSalePrice(event.target.value)} />
+            ETH
           </label>
         }
 
