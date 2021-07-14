@@ -2,7 +2,7 @@ import { getSalesNft } from './utils/products'
 import { getBidNft } from './utils/products';
 import useSWR from 'swr';
 import Countdown from 'react-countdown';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
