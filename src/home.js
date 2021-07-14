@@ -3,6 +3,7 @@ import { getBidNft } from './utils/products';
 import useSWR from 'swr';
 import Countdown from 'react-countdown';
 import ReactPlayer from 'react-player';
+import timeHelper from './utils/timeHelper'
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -15,6 +16,9 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
 function Home() {
   const { data: Salesnfts, error } = useSWR('./utils/products.js', getSalesNft);
   const bidNfts = getBidNft();
+
+  let date = new Date(Date.now());
+  console.log(date);
 
   if(error) return "Error!";
   if(!Salesnfts) return "Loading!";
@@ -85,7 +89,7 @@ function Home() {
                   <div class="d-flex justify-content-between">
                     <button class="btn btn-primary">{nft.price}</button>
                     <span class="btn btn-info">
-                      <Countdown date={Date.now() + (nft.time*60000)} renderer={renderer} ></Countdown>
+                      <Countdown date={timeHelper(nft.time)} renderer={renderer} ></Countdown>
                     </span>
                   </div>
                 </div>

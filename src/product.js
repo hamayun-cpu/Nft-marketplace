@@ -2,6 +2,7 @@ import { getUserById } from './utils/products';
 import { useParams } from 'react-router'
 import Countdown from 'react-countdown';
 import ReactPlayer from 'react-player'
+import timeHelper from './utils/timeHelper'
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -41,7 +42,7 @@ const Product = (props) => {
           <div class="d-flex justify-content-between">
             <button class="btn btn-primary">{nft.price}</button>
             {!nft.buyable &&  <span class="btn btn-info">
-              <Countdown date={Date.now() + (nft.time*60000)} renderer={renderer} ></Countdown>
+              <Countdown date={timeHelper(nft.time)} renderer={renderer} ></Countdown>
             </span>}
           </div>
           {nft.buyable && <button class="btn btn-primary mt-2">Buy</button>}
