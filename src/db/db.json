@@ -19,7 +19,7 @@
     },
     {
       "id": 3,
-      "picture": "./assets/pic3.jpeg",
+      "picture": "./assets/pic3.jpg",
       "title": "Mario",
       "description": "One of the most Popular character of game Super Mario. We all played Mario and have so much emotional attachment to Mario",
       "price": "3 ETH",
@@ -33,16 +33,16 @@
       "description": "He is an individual under the control of Devil Gene. His power has gone beyond that of a regular human being",
       "price": "7 ETH",
       "time": "2",
-      "buyable": false
+      "buyable": true
     },
     {
       "id": 5,
-      "picture": "./assets/pic3.jpeg",
+      "picture": "./assets/pic3.jpg",
       "title": "Mario",
       "description": "One of the most Popular character of game Super Mario. We all played Mario and have so much emotional attachment to Mario",
       "price": "3 ETH",
       "time": "4",
-      "buyable": true
+      "buyable": false
     },
     {
       "id": 6,

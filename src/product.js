@@ -1,4 +1,3 @@
-import image3 from './assets/pic3.jpg';
 import { getUserById } from './utils/products';
 import { useParams } from 'react-router'
 import Countdown from 'react-countdown';
@@ -21,7 +20,7 @@ const Product = (props) => {
 
     <div className = "mt-12">
       <div class="card w-o h-100 m-auto">
-        <img class="card-img-top h-50" src={image3} alt="Card cap"/>
+        <img class="card-img-top h-50" src={nft.picture}  alt="Card cap"/>
         <div class="card-body">
           <h5 class="card-title">{nft.title}</h5>
           <p class="card-text"> {nft.description}</p>
