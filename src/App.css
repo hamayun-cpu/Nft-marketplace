@@ -262,3 +262,16 @@ tr:nth-child(even) {
 .h-60 {
   height: 60%;
 }
+
+.popup {
+  background-color: rgba(1, 7, 17, 0.856);
+  width: 50%;
+  position: fixed;
+  top: 300px;
+  right: 250px;
+  height: 500px;
+  border: solid;
+  border-radius: 90px;
+  color: white;
+  padding: 40px;
+}

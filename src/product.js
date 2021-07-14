@@ -3,6 +3,8 @@ import { useParams } from 'react-router'
 import Countdown from 'react-countdown';
 import ReactPlayer from 'react-player'
 import timeHelper from './utils/timeHelper'
+import Popup from 'reactjs-popup';
+import { useState } from 'react';
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -15,8 +17,19 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
 const Product = (props) => {
 
   let { id } = useParams();
-
   const nft = getUserById(id);
+
+  const [bidPrice, setBid] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if(bidPrice) {
+      console.log(bidPrice);
+      window.alert("bid successful");
+    } else {
+      window.alert("bid Unsuccessful");
+    }
+  }
 
   return (
 
@@ -45,8 +58,29 @@ const Product = (props) => {
               <Countdown date={timeHelper(nft.time)} renderer={renderer} ></Countdown>
             </span>}
           </div>
-          {nft.buyable && <button className="btn btn-primary mt-2">Buy</button>}
-          {!nft.buyable && <button className="btn btn-primary mt-2">Bid</button>}
+
+          {nft.buyable &&
+            <Popup trigger={<button className="btn btn-primary mt-2"> Buy</button>}>
+              <div className = "popup d-flex justify-content-center align-items-center flex-column">
+                <span className="font-weight-bold text-uppercase">Price</span> {nft.price}
+                <button className="btn btn-primary w-100 my-3">Buy</button>
+              </div>
+            </Popup>
+          }
+
+          {!nft.buyable &&
+           <Popup trigger={<button className="btn btn-primary mt-2"> Bid</button>}>
+              <div className = "popup d-flex justify-content-center align-items-center flex-column">
+                <form>
+                  <label>Bid Price
+                    <input className="w-100" type="number" id="bidPrice" onChange={ (event) => setBid(event.target.value)} />
+                  </label>
+                  <button onClick={handleSubmit} type="submit" value="Submit" className="btn btn-primary w-100 my-3">Bid</button>
+                </form> 
+              </div>
+            </Popup>
+          }
+
         </div>
       </div>
       {!nft.buyable &&
