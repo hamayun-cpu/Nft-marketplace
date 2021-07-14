@@ -2,6 +2,7 @@ import { getSalesNft } from './utils/products'
 import { getBidNft } from './utils/products';
 import useSWR from 'swr';
 import Countdown from 'react-countdown';
+import ReactPlayer from 'react-player'
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -30,7 +31,21 @@ function Home() {
           {Salesnfts.map((nft) => (
             <div class="col-sm mt-3">
               <div class="card w-o h-550 m-auto">
-                <img class="card-img-top h-60" src={nft.picture}  alt="Card cap"/>
+
+              { nft.type === 'pic' &&
+                <img class="card-img-top h-50" src={nft.media}  alt="Card cap"/>
+              }
+
+              { nft.type === 'vid'  &&
+                <ReactPlayer class="card-img-top h-50" url={nft.media}
+                  controls = {false}
+                  muted = {true}
+                  width = {'20.9rem'}
+                  playing = {true}
+                  loop = {true}
+                />
+              }
+
                 <div class="card-body">
                   <h5 class="card-title"><a href={`/product/${nft.id}`} class="color-black">{nft.title}</a></h5>
                   <p class="card-text">{nft.description}</p>
@@ -51,7 +66,18 @@ function Home() {
           {bidNfts.map((nft) => (
             <div class="col-sm mt-3">
               <div class="card w-o h-550 m-auto">
-                <img class="card-img-top h-60" src={nft.picture}  alt="Card cap"/>
+                { nft.type === 'pic' &&
+                  <img class="card-img-top h-50" src={nft.media}  alt="Card cap"/>
+                }
+
+                { nft.type === 'vid'  &&
+                  <ReactPlayer class="card-img-top h-50" url={nft.media}
+                    controls = {true}
+                    muted = {true}
+                    width= {'20.9rem'}
+                    playing = {true}
+                  />
+                }
                 <div class="card-body">
                   <h5 class="card-title"><a href={`/product/${nft.id}`} class="color-black">{nft.title}</a></h5>
                   <p class="card-text">{nft.description}</p>

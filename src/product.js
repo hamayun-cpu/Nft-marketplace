@@ -1,6 +1,7 @@
 import { getUserById } from './utils/products';
 import { useParams } from 'react-router'
 import Countdown from 'react-countdown';
+import ReactPlayer from 'react-player'
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -20,7 +21,20 @@ const Product = (props) => {
 
     <div className = "mt-12">
       <div class="card w-o h-100 m-auto">
-        <img class="card-img-top h-50" src={nft.picture}  alt="Card cap"/>
+
+        { nft.type === 'pic' &&
+          <img class="card-img-top h-50" src={nft.media}  alt="Card cap"/>
+        }
+
+        { nft.type === 'vid'  &&
+          <ReactPlayer class="card-img-top h-50" url={nft.media}
+            controls = {true}
+            muted = {true}
+            width= {'20.9rem'}
+            playing = {true}
+          />
+        }
+        
         <div class="card-body">
           <h5 class="card-title">{nft.title}</h5>
           <p class="card-text"> {nft.description}</p>
