@@ -29,8 +29,8 @@ function Home() {
         <div class="row">
           {Salesnfts.map((nft) => (
             <div class="col-sm mt-3">
-              <div class="card w-o h-100 m-auto">
-                <img class="card-img-top h-50" src={nft.picture}  alt="Card cap"/>
+              <div class="card w-o h-550 m-auto">
+                <img class="card-img-top h-60" src={nft.picture}  alt="Card cap"/>
                 <div class="card-body">
                   <h5 class="card-title"><a href={`/product/${nft.id}`} class="color-black">{nft.title}</a></h5>
                   <p class="card-text">{nft.description}</p>
@@ -46,12 +46,12 @@ function Home() {
           Bids
         </h1>
       </div>
-      <div class="container">
+      <div class="container mb-2">
         <div class="row">
           {bidNfts.map((nft) => (
             <div class="col-sm mt-3">
-              <div class="card w-o h-100 m-auto">
-                <img class="card-img-top h-50" src={nft.picture}  alt="Card cap"/>
+              <div class="card w-o h-550 m-auto">
+                <img class="card-img-top h-60" src={nft.picture}  alt="Card cap"/>
                 <div class="card-body">
                   <h5 class="card-title"><a href={`/product/${nft.id}`} class="color-black">{nft.title}</a></h5>
                   <p class="card-text">{nft.description}</p>
