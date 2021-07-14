@@ -25,6 +25,10 @@
   padding-top: 102px;
 }
 
+.mt-12 {
+  margin-top: 112px;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;

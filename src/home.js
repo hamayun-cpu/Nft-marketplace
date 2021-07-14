@@ -20,14 +20,14 @@ function Home() {
   if(!Salesnfts) return "Loading!";
 
     return (
-    <div>
-      <div class="d-flex justify-content-center pad-75">
+    <div className="mt-12">
+      <div class="d-flex justify-content-center">
         <h1>
           Sales
         </h1>
       </div>
       <div class="container">
-        <div class="row mt-75 mb-5">
+        <div class="row">
           {Salesnfts.map((nft) => (
             <div class="col-sm mt-3">
               <div class="card w-o h-100 m-auto">
@@ -42,13 +42,13 @@ function Home() {
           ))}
         </div>
       </div>
-      <div class="d-flex justify-content-center pad-75">
+      <div class="d-flex justify-content-center mt-5">
         <h1>
           Bids
         </h1>
       </div>
       <div class="container">
-        <div class="row mt-75 mb-5">
+        <div class="row">
           {bidNfts.map((nft) => (
             <div class="col-sm mt-3">
               <div class="card w-o h-100 m-auto">

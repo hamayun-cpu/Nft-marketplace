@@ -19,8 +19,8 @@ const Product = (props) => {
 
   return (
 
-    <div>
-      <div class="card w-o h-100 m-auto pad-75">
+    <div className = "mt-12">
+      <div class="card w-o h-100 m-auto">
         <img class="card-img-top h-50" src={image3} alt="Card cap"/>
         <div class="card-body">
           <h5 class="card-title">{nft.title}</h5>
@@ -36,7 +36,7 @@ const Product = (props) => {
         </div>
       </div>
       {!nft.buyable &&
-      <table class='mx-auto mt-5'>
+      <table class='mx-auto my-5'>
         <tr>
           <th>Highest bid</th>
           <th>From</th>
@@ -60,7 +60,7 @@ const Product = (props) => {
       </table>
       }
       {nft.buyable &&
-      <table class='mx-auto mt-5'>
+      <table class='mx-auto my-5'>
         <tr>
           <th>Sale History</th>
           <th>From</th>

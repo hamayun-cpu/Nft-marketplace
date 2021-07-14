@@ -2,7 +2,7 @@ const about = () => {
   return (
     <div class="d-flex justify-content-center pad-75">
       <h1>
-        Hello to the the gaming NFT form Hassan Samee(CTO)
+        Hello to the the gaming NFT from Hassan Samee(CTO)
       </h1>
    </div>
   );
