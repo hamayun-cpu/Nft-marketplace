@@ -21,14 +21,14 @@ const Product = (props) => {
   return (
 
     <div className = "mt-12">
-      <div class="card w-o h-100 m-auto">
+      <div className="card w-o h-100 m-auto">
 
         { nft.type === 'pic' &&
-          <img class="card-img-top h-50" src={nft.media}  alt="Card cap"/>
+          <img className="card-img-top h-50" src={nft.media}  alt="Card cap"/>
         }
 
         { nft.type === 'vid'  &&
-          <ReactPlayer class="card-img-top h-50" url={nft.media}
+          <ReactPlayer className="card-img-top h-50" url={nft.media}
             controls = {true}
             muted = {true}
             width= {'20.9rem'}
@@ -36,21 +36,21 @@ const Product = (props) => {
           />
         }
         
-        <div class="card-body">
-          <h5 class="card-title">{nft.title}</h5>
-          <p class="card-text"> {nft.description}</p>
-          <div class="d-flex justify-content-between">
-            <button class="btn btn-primary">{nft.price}</button>
-            {!nft.buyable &&  <span class="btn btn-info">
+        <div className="card-body">
+          <h5 className="card-title">{nft.title}</h5>
+          <p className="card-text"> {nft.description}</p>
+          <div className="d-flex justify-content-between">
+            <button className="btn btn-primary">{nft.price}</button>
+            {!nft.buyable &&  <span className="btn btn-info">
               <Countdown date={timeHelper(nft.time)} renderer={renderer} ></Countdown>
             </span>}
           </div>
-          {nft.buyable && <button class="btn btn-primary mt-2">Buy</button>}
-          {!nft.buyable && <button class="btn btn-primary mt-2">Bid</button>}
+          {nft.buyable && <button className="btn btn-primary mt-2">Buy</button>}
+          {!nft.buyable && <button className="btn btn-primary mt-2">Bid</button>}
         </div>
       </div>
       {!nft.buyable &&
-      <table class='mx-auto my-5'>
+      <table className='mx-auto my-5'>
         <tr>
           <th>Highest bid</th>
           <th>From</th>
@@ -74,7 +74,7 @@ const Product = (props) => {
       </table>
       }
       {nft.buyable &&
-      <table class='mx-auto my-5'>
+      <table className='mx-auto my-5'>
         <tr>
           <th>Sale History</th>
           <th>From</th>

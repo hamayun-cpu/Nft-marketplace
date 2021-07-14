@@ -10,13 +10,13 @@ function App() {
   return (
     <Router>
       <div>
-        <nav class="navbar navbar-light bg-light justify-content-between sticky">
-          <div class="navbar-brand">
-            <Link to="/" class="mr-3 color-black">Home</Link>
-            <Link to="/about" class="mr-3 color-black">About</Link>
-            <Link to="/update" class="mr-3 color-black">Sale/Bid</Link>
+        <nav className="navbar navbar-light bg-light justify-content-between sticky">
+          <div className="navbar-brand">
+            <Link to="/" className="mr-3 color-black">Home</Link>
+            <Link to="/about" className="mr-3 color-black">About</Link>
+            <Link to="/update" className="mr-3 color-black">Sale/Bid</Link>
           </div>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Connect Wallet</button>
+          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Connect Wallet</button>
         </nav>
 
         <Switch>
