@@ -3,7 +3,7 @@ import SelectSearch from 'react-select-search';
 import { fuzzySearch } from 'react-select-search';
 import { getAllIds } from './utils/products';
 
-const Update = (props) => {
+const NftState = (props) => {
   //varibales
   let ids = getAllIds();
   const [toggleValue, setStatus] = useState("");
@@ -82,4 +82,4 @@ const Update = (props) => {
   );
 }
 
-export default Update;
+export default NftState;

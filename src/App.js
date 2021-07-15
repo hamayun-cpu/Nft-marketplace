@@ -4,7 +4,7 @@ import './App.css';
 import About from './about';
 import Home from './home';
 import Product from './product';
-import Update from './update';
+import NftState from './nftState';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <div className="navbar-brand">
             <Link to="/" className="mr-3 color-black">Home</Link>
             <Link to="/about" className="mr-3 color-black">About</Link>
-            <Link to="/update" className="mr-3 color-black">Sale/Bid</Link>
+            <Link to="/nftState" className="mr-3 color-black">Sale/Bid</Link>
           </div>
           <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Connect Wallet</button>
         </nav>
@@ -26,8 +26,8 @@ function App() {
           <Route exact path="/product/:id">
             <Product />
           </Route>
-          <Route path="/update">
-            <Update />
+          <Route path="/nftState">
+            <NftState />
           </Route>
           <Route path="/">
             <Home />
