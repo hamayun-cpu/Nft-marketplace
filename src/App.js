@@ -9,7 +9,7 @@ import Update from './update';
 function App() {
   return (
     <Router>
-      <div>
+      <>
         <nav className="navbar navbar-light bg-light justify-content-between sticky">
           <div className="navbar-brand">
             <Link to="/" className="mr-3 color-black">Home</Link>
@@ -33,7 +33,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
+      </>
     </Router>
 
   );

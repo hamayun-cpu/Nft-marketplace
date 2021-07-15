@@ -24,6 +24,7 @@ function Home() {
     }
   };
 
+  //JSX
   return (
     <div className="mt-12">
       <div className="d-flex justify-content-center">
