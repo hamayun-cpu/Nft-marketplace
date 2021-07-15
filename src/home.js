@@ -1,9 +1,9 @@
-import { getSalesNft } from './utils/products'
-import { getBidNft } from './utils/products';
 import useSWR from 'swr';
 import Countdown from 'react-countdown';
 import ReactPlayer from 'react-player';
 import timeHelper from './utils/timeHelper'
+import { getSalesNft } from './utils/products'
+import { getBidNft } from './utils/products';
 
 
 function Home() {

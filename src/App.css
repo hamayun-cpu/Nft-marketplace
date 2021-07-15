@@ -1,6 +1,7 @@
 .color-black {
   color: black;
 }
+
 .w-o {
   width: 21rem;
 }
@@ -45,9 +46,7 @@ th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-/**
- * Main wrapper
- */
+
 .select-search {
   width: 300px;
   position: relative;
@@ -61,9 +60,6 @@ tr:nth-child(even) {
   box-sizing: inherit;
 }
 
-/**
-* Value wrapper
-*/
 .select-search__value {
   position: relative;
   z-index: 1;
@@ -79,9 +75,6 @@ tr:nth-child(even) {
   height: 11px;
 }
 
-/**
-* Input
-*/
 .select-search__input {
   display: block;
   height: 36px;
@@ -111,31 +104,19 @@ tr:nth-child(even) {
   cursor: initial;
 }
 
-/**
-* Options wrapper
-*/
 .select-search__select {
   background: #fff;
   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15);
 }
 
-/**
-* Options
-*/
 .select-search__options {
   list-style: none;
 }
 
-/**
-* Option row
-*/
 .select-search__row:not(:first-child) {
   border-top: 1px solid #eee;
 }
 
-/**
-* Option
-*/
 .select-search__option,
 .select-search__not-found {
   display: block;
@@ -171,9 +152,6 @@ tr:nth-child(even) {
   color: #fff;
 }
 
-/**
-* Group
-*/
 .select-search__group-header {
   font-size: 10px;
   text-transform: uppercase;
@@ -181,9 +159,6 @@ tr:nth-child(even) {
   padding: 8px 16px;
 }
 
-/**
-* States
-*/
 .select-search.is-disabled {
   opacity: 0.5;
 }
@@ -197,9 +172,6 @@ tr:nth-child(even) {
   cursor: pointer;
 }
 
-/**
-* Modifiers
-*/
 .select-search--multiple {
   border-radius: 3px;
   overflow: hidden;
@@ -265,7 +237,7 @@ tr:nth-child(even) {
 
 .popup {
   background-color: rgba(1, 7, 17, 0.856);
-  max-width: 407px;
+  width: 407px;
   min-width: 310px;
   position: fixed;
   top: 50%;

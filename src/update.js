@@ -1,7 +1,7 @@
-import { getAllIds } from "./utils/products";
+import { useState } from 'react';
 import SelectSearch from 'react-select-search';
-import { fuzzySearch } from "react-select-search";
-import { useState } from "react";
+import { fuzzySearch } from 'react-select-search';
+import { getAllIds } from './utils/products';
 
 const Update = () => {
   //varibales

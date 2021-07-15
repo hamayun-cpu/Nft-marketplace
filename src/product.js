@@ -1,10 +1,10 @@
-import { getUserById } from './utils/products';
+import { useState } from 'react';
 import { useParams } from 'react-router'
 import Countdown from 'react-countdown';
 import ReactPlayer from 'react-player'
-import timeHelper from './utils/timeHelper'
 import Popup from 'reactjs-popup';
-import { useState } from 'react';
+import { getUserById } from './utils/products';
+import timeHelper from './utils/timeHelper'
 
 const Product = (props) => {
   //variables
