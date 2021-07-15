@@ -36,7 +36,7 @@ const Product = (props) => {
     <div className = "mt-12">
       <div className="card w-o h-100 m-auto">
         { nft.type === 'pic' &&
-          <img className="card-img-top h-50" src={nft.media}  alt="Card cap"/>
+          <img className="card-img-top h-50" src={nft.media}  alt={nft.name}/>
         }
         { nft.type === 'vid'  &&
           <ReactPlayer className="card-img-top h-50" url={nft.media}

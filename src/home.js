@@ -36,7 +36,7 @@ function Home() {
             <div className="col-sm mt-3" key={nft.id}>
               <div className="card w-o h-550 m-auto">
                 { nft.type === 'pic' &&
-                  <img className="card-img-top h-60" src={nft.media}  alt="Card cap"/>
+                  <img className="card-img-top h-60" src={nft.media}  alt={nft.name}/>
                 }
                 { nft.type === 'vid'  &&
                   <ReactPlayer className="card-img-top h-60" url={nft.media}
@@ -66,7 +66,7 @@ function Home() {
             <div className="col-sm mt-3" key={nft.id}>
               <div className="card w-o h-550 m-auto">
                 { nft.type === 'pic' &&
-                  <img className="card-img-top h-60" src={nft.media}  alt="Card cap"/>
+                  <img className="card-img-top h-60" src={nft.media}  alt={nft.name}/>
                 }
 
                 { nft.type === 'vid'  &&
