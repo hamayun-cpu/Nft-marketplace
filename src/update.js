@@ -3,14 +3,13 @@ import SelectSearch from 'react-select-search';
 import { fuzzySearch } from 'react-select-search';
 import { getAllIds } from './utils/products';
 
-const Update = () => {
+const Update = (props) => {
   //varibales
   let ids = getAllIds();
   const [toggleValue, setStatus] = useState("");
   const [bidPrice, setBidPrice] = useState("");
   const [salePrice, setSalePrice] = useState("");
   const [idd, setIdd] = useState("");
-
 
   //funtions
   function toggle() {
@@ -55,7 +54,7 @@ const Update = () => {
           search
           filterOptions={fuzzySearch}
           placeholder="Select Nft by Id"
-          onChange={ setIdd} 
+          onChange={ setIdd } 
         />
         <label className="mt-3">
           <input className="mx-2" type="checkbox" id="myCheck" onChange={ (event) => toggle()}/>

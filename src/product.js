@@ -81,55 +81,59 @@ const Product = (props) => {
       </div>
       {!nft.buyable &&
         <table className='mx-auto my-5'>
-          <tr>
-            <th>Highest bid</th>
-            <th>From</th>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Highest bid</th>
+              <th>From</th>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+            </tr>
+          </tbody>
         </table>
       }
       {nft.buyable &&
         <table className='mx-auto my-5'>
-          <tr>
-            <th>Sale History</th>
-            <th>From</th>
-            <th>To</th>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-            <td>0x1235653edc</td>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-            <td>0x1235653edc</td>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-            <td>0x1235653edc</td>
-          </tr>
-          <tr>
-            <td>20 ETH</td>
-            <td>0x1235653234</td>
-            <td>0x1235653edc</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Sale History</th>
+              <th>From</th>
+              <th>To</th>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+              <td>0x1235653edc</td>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+              <td>0x1235653edc</td>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+              <td>0x1235653edc</td>
+            </tr>
+            <tr>
+              <td>20 ETH</td>
+              <td>0x1235653234</td>
+              <td>0x1235653edc</td>
+            </tr>
+          </tbody>
       </table>
       }
     </div>
